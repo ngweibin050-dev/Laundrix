@@ -42,3 +42,10 @@ app-example
 # generated native folders
 /ios
 /android
+
+my-debug.keystore
+ngwb050_laundrix.jks
+package-lock.json
+GoogleService-Info.plist
+eas.json
+google-services.json
