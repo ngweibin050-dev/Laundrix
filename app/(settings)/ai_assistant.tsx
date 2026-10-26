@@ -66,11 +66,13 @@ export default function AIAssistant() {
 
   const getAIResponse = async (userPrompt: string): Promise<string> => {
     try {
-      // Build conversation history from previous messages (excluding welcome message)
+      // Build conversation history from previous messages (excluding the welcome message).
+      // Gemini expects alternating user/model turns; sending only model turns made it
+      // lose track of what the student had asked earlier.
       const history = messages
-        .filter(m => m.id !== "0" && !m.isUser) // Only previous AI responses
+        .filter(m => m.id !== "0")
         .map(m => ({
-          role: "model" as const,
+          role: m.isUser ? ("user" as const) : ("model" as const),
           parts: [{ text: m.text }]
         }));
 
