@@ -157,7 +157,8 @@ Flash the ESP32 sketch with the Arduino IDE (ESP32 board package), after setting
 ## Team
 
 Built by a team of four for CT125 Digital Technology.
-Ng Wei Bin
-Tey Hao Rui
-Aisyah
-Nabila
+- Ng Wei Bin
+- Tey Hao Rui
+- Aisyah
+- Nabila
+- Amir Mujahid (Friend)
